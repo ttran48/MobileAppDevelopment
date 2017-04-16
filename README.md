@@ -1,7 +1,7 @@
 # MobileAppDevelopment
 
 ## Technology Requirements
-- IDE: Eclipse
+- IDE: Android Studio
 
 ## Setting Up the Workspace
 - Create a folder in your selected location named workspace
