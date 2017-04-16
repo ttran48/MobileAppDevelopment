@@ -138,8 +138,12 @@ Navigate to the MainActivity.java file and Copy/Paste the following code
 /* Identifies this class as belonging to the cortana package */
 package com.example.tomtran.cortana;
 
-import android.os.Bundle; /* A bundle is an object for passing data between activities */
+import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
 /* MainActivity is a subclass of AppCompatAcitvity */
@@ -151,26 +155,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         /* this code tells the activity to use the activity_main.xml files as the layout */
         setContentView(R.layout.activity_main);
+        initDisplayButton();
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu. main , menu);
-        return true ;
+    private void initDisplayButton() {
+        Button displayButton = (Button) findViewById(R.id.buttonDisplay);
+        displayButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                EditText editName = (EditText) findViewById(R.id.editTextName);
+                TextView textDisplay = (TextView) findViewById(R.id.textViewDisplay);
+                String nameToDisplay = editName.getText().toString();
+                textDisplay.setText("Hello " + nameToDisplay);
+            }
+        });
     }
-}
-
-private void initDisplayButton() {
-    Button displayButton = (Button) findViewById(R.id.buttonDisplay);
-    displayButton.setOnClickListerner(new OnClickListener () {
-
-        @Override
-        public void onClick(view arg0) {
-            EditText editName = (EditText) findViewById(R.id.editTextName);
-            TextView textDisplay = (TextView) findViewById(R.id.textViewDisplay);
-            String nameToDisplay = editName.getText().toString();
-            textDisplay.setText("Hello " + nameToDisplay);
-        }
-    })
 }
 ```
