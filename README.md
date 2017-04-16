@@ -1,7 +1,24 @@
 # MobileAppDevelopment
 
+The 2 files that I am building are included in this repository. Note that my included files will not work if
+performing the copy/paste function. The file paths must be changed to rectify the errors.
+- MainActivity.java
+- activity_main.xml
+
 ## Technology Requirements
 - IDE: Android Studio
+- Driver for Windows 
+
+https://developer.android.com/studio/run/win-usb.html
+
+This is complete instruction of installing java, eclipse and android SDK and ADT 
+(Android Development Tool) plugin for eclipse.
+
+https://www.youtube.com/watch?v=TKjm-c_irTk
+
+Watch the Youtube video and follow the instruction till minute 20. (Not more)
+The video is old so is may be missing some APIs. These will be identified and installed during the
+setup process.
 
 ## Setting Up the Workspace
 - Create a folder in your selected location named workspace
