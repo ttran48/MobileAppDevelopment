@@ -58,3 +58,24 @@ app will pick the one that best matches the device it is running on.
 
 Suggested sizes for app icons are 32x32, 48x48, 72x72, 96x96 and 144x144 pixels
 ```
+
+## Coding the Interface
+
+```
+1) Double click the activity_main.xml file
+.../app/src/main/res/layout/activity_main.xml
+
+2) Change text size by selecting the Design Tab then selecting Textview under 
+ConstraintLayoutand a Properties panel will populate on the right side of the 
+window
+
+3) Change the textSize to 24sp
+```
+
+![appimg3](https://cloud.githubusercontent.com/assets/25268970/25068476/36367f9e-2233-11e7-9eb8-a6fd5f198b10.jpg)
+
+```
+4) Add another TextView Widget to the User Interface by selecting the widget 
+then dragging and dropping it anywhere
+```
+![appimg4](https://cloud.githubusercontent.com/assets/25268970/25068527/6b38de5c-2234-11e7-9409-950cf925de5e.jpg)
