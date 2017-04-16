@@ -79,3 +79,55 @@ window
 then dragging and dropping it anywhere
 ```
 ![appimg4](https://cloud.githubusercontent.com/assets/25268970/25068527/6b38de5c-2234-11e7-9409-950cf925de5e.jpg)
+
+```
+5) Add an ID to the first <TextView in the activity_main.xml
+android:id="@+id/textViewDisplay"
+
+Should look like this:
+
+    <TextView
+        android:id="@+id/textViewDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+```
+
+```
+6) Change the text of the new TextView widget from "TextView" to "Name: "
+Then change the layout of both widgets to look like the image below. By
+selecting the desired widget and dragging it to the relative location of choice
+
+The precise positioning is not important
+```
+
+![appimg5](https://cloud.githubusercontent.com/assets/25268970/25068628/c9db589c-2237-11e7-8906-4068460675cd.jpg)
+
+```
+7) Add the EditText Element to activity_main.xml
+Note: This element may not be located in the Widgets. If it is not, copy the following
+code into your xml file and place it under the <TextView block
+
+<EditText
+    android:id="@+id/et_simple"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+    android:ems="10"
+    android:inputType="text"
+</EditText>
+
+Change the default id to "@+id/editTextName"
+```
+
+```
+8) Locate widgets once again. Drag and drop the button element onto the UI.
+Change the ID to "@+id/buttonDisplay"
+Change the text attribute from "button" to "Display"
+```
+
+## Coding App Behavior
