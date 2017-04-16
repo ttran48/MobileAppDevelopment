@@ -172,3 +172,12 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
+
+## Issues
+```
+1 - no <RelativeLayout in the xml file means that you will not be able to hold elements in place
+2 - Hover over the red keywords and press Alt+Enter; then select the appropriate options that
+appear to correct the errors.
+
+Side Note: The app works but does not display correctly
+```
