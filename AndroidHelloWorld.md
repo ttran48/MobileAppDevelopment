@@ -1,4 +1,4 @@
-# MobileAppDevelopment
+# Android Hello World
 
 The 2 files that I am building are included in this repository. Note that my included files will not work if
 performing the copy/paste function. The file paths must be changed to rectify the errors.
