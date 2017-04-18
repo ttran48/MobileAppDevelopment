@@ -621,4 +621,65 @@ public class ContactActivity extends AppCompatActivity {
 ```
 Additional notes: If parts of the code appear Red, hover over the text and a hint will populate. Once the hint populate, hit Alt + Enter to accept and implement the hint.
 
+## Code the Toggle Button
+### Step 1
+Implement the following code under the last block of code in the ContactActivity.java. The last block should have been iniSettingsButton 
+```
+ private void initToggleButton() {
+        final ToggleButton editToggle = (ToggleButton)
+                findViewById(R.id.toggleButtonEdit);
+        editToggle.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                setForEditing(editToggle.isChecked());
+            }
+        });
+    }
+    private void setForEditing(boolean enabled) {
+        EditText editName = (EditText) findViewById(R.id. editName );
+        EditText editAddress = (EditText) findViewById(R.id. editAddress );
+        EditText editCity = (EditText) findViewById(R.id. editCity );
+        EditText editState = (EditText) findViewById(R.id. editState );
+        EditText editZipCode = (EditText) findViewById(R.id. editZipcode );
+        EditText editPhone = (EditText) findViewById(R.id. editHome );
+        EditText editCell = (EditText) findViewById(R.id. editCell );
+        EditText editEmail = (EditText) findViewById(R.id. editEMail );
+        Button buttonChange = (Button) findViewById(R.id. btnBirthday );
+        Button buttonSave = (Button) findViewById(R.id. buttonSave );
+
+        editName.setEnabled(enabled);
+        editAddress.setEnabled(enabled);
+        editCity.setEnabled(enabled);
+        editState.setEnabled(enabled);
+        editZipCode.setEnabled(enabled);
+        editPhone.setEnabled(enabled);
+        editCell.setEnabled(enabled);
+        editEmail.setEnabled(enabled);
+        buttonChange.setEnabled(enabled);
+        buttonSave.setEnabled(enabled);
+
+        if (enabled) {
+            editName.requestFocus();
+        }
+    }
+```
+
 ### Step 2
+Add the following code into the OnCreate method to initalize the new ToggleButton code
+```
+        initToggleButton();
+        setForEditing(false);
+```
+
+### Step 3
+Navigate to the activity_contact.xml. Insert the following code as the first element in the Root RelativeLayout
+```
+<LinearLayout
+android:focusable="true"
+android:focusableInTouchMode="true"
+android:layout_width="0px"
+android:layout_height="0px" />
+```
+
+### Step 4
