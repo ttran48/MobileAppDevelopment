@@ -515,4 +515,50 @@ Then create another additional 3 elements for Birthday Text, Date Text and a But
 Right click the layout folder and create a New > XML > XML Layout file. Name this file dateselect and type in LinearLayout for the root tag
 
 ### Step 2
-Navigate to the Palette and Date Picker from the Date option. Drag and drop this element into the dateselect LinearLayout.
+Navigate to the Palette and datePicker from the Date option. Drag and drop this element into the dateselect LinearLayout. Then select the TableLayout from the Layouts option. Drag and drop the TableLayout element under the datePicker element in the component tree. After, multiple tableRows will appear. Delete all but 1 by right-clicking and selecting delete.
+
+### Step 3
+Next drag and drop 2 button elements under the tableRow element. Navigate to the Text tab and modify/remove the content to reflect the following code below.
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dateSelectLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <DatePicker
+        android:id="@+id/birthdayPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:calendarViewShown="false" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/btnOk"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Ok" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
+```
+
+## Code the Navigation Bar
