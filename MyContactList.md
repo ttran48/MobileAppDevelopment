@@ -47,12 +47,12 @@ Drag and drop the Relative Layout into the Component Tree under the root Relativ
 
 ![img6](https://cloud.githubusercontent.com/assets/25268970/25109020/eacde6c0-23a7-11e7-8f54-0cbf82771c05.jpg)
 
-## Step 4
+### Step 4
 In the same xml file, navigate to the Palette in the Design Tab. Select Images in the Palette and then drag and drop ImageButton under the second Relative Layout in the Component Tree. A window will populate to allow the selection of an image. Select the ContactListIcon and OK.
 
 ![img7](https://cloud.githubusercontent.com/assets/25268970/25109548/63dbf824-23ab-11e7-9bdc-c320f7ddc445.jpg)
 
-## Step 5
+### Step 5
 Switch to the activity_contact.xml. Locate the child Relative Layout of the root Relative Layout.
 Change the content of android:layout_width and android:layout_height to "fill_parent"
 ```
@@ -62,3 +62,11 @@ Change the content of android:layout_width and android:layout_height to "fill_pa
         android:layout_alignParentStart="true"
         android:id="@+id/relativeLayout">
 ```
+### Step 6
+Navigate back to the Design Tab, select ImageButton from the Palette and drag it under the previous button in the Component Tree. Again, a window will populate to select an image. Select mapicon. Repeat the process for the settingsicon.
+
+![img8](https://cloud.githubusercontent.com/assets/25268970/25110175/e7cf2472-23af-11e7-8161-216292f8df33.jpg)
+
+## Create a Color Resource
+### Step 1
+Navigate to the res > values folder and right-click it.
