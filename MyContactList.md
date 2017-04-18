@@ -242,3 +242,24 @@ Return to the Toolbar XML in activity_contact.xml and modify/remove material as 
 
 ## Create the Data Entry Form
 ### Step 1
+In the activity_contact.xml, switch to the Design Tab and locate the Containers option in the Palette. Select ScrollView, drag and drop between the toolbar RelativeLayout and Navbar RelativeLayout. Like so:
+
+![img14](https://cloud.githubusercontent.com/assets/25268970/25146004/7f456c18-2440-11e7-815f-54f1629e2465.jpg)
+
+### Step 2
+Switch to the Text Tab and modify the default code to reflect the code below:
+```
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/navbar" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </RelativeLayout>
+    </ScrollView>
+```
