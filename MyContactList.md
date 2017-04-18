@@ -471,3 +471,39 @@ Next create a TextView and EditText element for each field; Home Phone and Cell 
             </EditText>
             
 ```
+### Step 8
+Then create another additional 3 elements for Birthday Text, Date Text and a Button to change the date. Implement the code under the last created element which should have been an EditText element for the Cell Phone field
+
+```
+            <TextView
+                android:id="@+id/textBday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="Birthday:"
+                android:layout_below="@+id/editEMail"
+                android:paddingBottom="25dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+            
+            <TextView
+                android:id="@+id/textBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="01/01/1970"
+                android:layout_toRightOf="@+id/textBday"
+                android:layout_alignBottom="@+id/textBday"
+                android:paddingBottom="25dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+            
+            <Button
+                android:id="@+id/btnBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignBaseline="@+id/textBirthday"
+                android:text="Change"/>
+```
