@@ -263,3 +263,111 @@ Switch to the Text Tab and modify the default code to reflect the code below:
         </RelativeLayout>
     </ScrollView>
 ```
+### Step 3
+Add in a TextView element into the ScrollView element.
+
+```
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/navbar" >
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+            <TextView
+                android:id="@+id/textContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Contact:"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+         </RelativeLayout>
+    </ScrollView>
+ ```
+### Step 4
+Add in an EditText element into the ScrollView element. Modify previous code in the activity_contact.xml to reflect the following:
+
+```
+<ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/navbar" >
+        
+        <TextView
+                android:id="@+id/textContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Contact:"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/textContact"
+        android:ems="14"
+        android:imeOptions="actionNext"
+        android:inputType="textCapWords" >    
+        
+        <requestFocus />    
+        </EditText>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </RelativeLayout>
+</ScrollView>
+  ```
+### Step 4
+Add in a TextView element under the EditText element with the following material:
+
+```
+<TextView
+    android:id="@+id/textAddress"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_below="@+id/editName"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="15dp"
+    android:text="Address:"
+    android:textAppearance="?android:attr/textAppearanceSmall" />
+```
+
+### Step 5
+Next copy the previous EditText element and paste it after the TextView element. Change the new EditText element to reflect the following code below
+
+```
+        <EditText
+            android:id="@+id/editAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/textAddress"
+            android:ems="14"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords" >
+            
+        </EditText>
+```
+Your Design View should look like below thus far.
+
+![img15](https://cloud.githubusercontent.com/assets/25268970/25147985/5bdd66de-2447-11e7-8844-2dd77015ca0f.jpg)
+
+### Step 6
