@@ -70,3 +70,10 @@ Navigate back to the Design Tab, select ImageButton from the Palette and drag it
 ## Create a Color Resource
 ### Step 1
 Navigate to the res > values folder and right-click it.
+Select New > XML > Values XML File
+
+![img9](https://cloud.githubusercontent.com/assets/25268970/25114842/b20d1072-23cf-11e7-846d-abafb6d265ba.jpg)
+
+A window will pop-up. Type color as the Value File Name and select finish.
+
+
