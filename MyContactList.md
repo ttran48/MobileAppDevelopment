@@ -35,13 +35,13 @@ Select the path of where is the image is stored, rename the image respectively t
 ### Step 3
 Open the activity_contact.xml. Select the Hello World on the UI and delete it. Change the constraint layout to a 
 relative layout if needed by in the text tab. Below is a sample:
-
+```
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
     ...
     ...
-
+```
 Then create another relative layout inside of the root relative layout by navigating to the Design tab selecting Layout in the Palette.
 Drag and drop the Relative Layout into the Component Tree under the root Relative Layout as shown
 
