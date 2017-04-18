@@ -509,3 +509,10 @@ Then create another additional 3 elements for Birthday Text, Date Text and a But
 ```
 
 ![img16](https://cloud.githubusercontent.com/assets/25268970/25150584/72a501ac-2450-11e7-8f2d-0c0fcf2d30c7.jpg)
+
+## Create the Dialog Layout
+### Step 1
+Right click the layout folder and create a New > XML > XML Layout file. Name this file dateselect and type in LinearLayout for the root tag
+
+### Step 2
+Navigate to the Palette and Date Picker from the Date option. Drag and drop this element into the dateselect LinearLayout.
