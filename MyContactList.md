@@ -157,5 +157,84 @@ Drag another regular button into the same child relative layout
 Navigate to the Text tab and ensure that the layout width and height for that child Relativelayout is set to match_parent
 ```
    android:layout_width="match_parent"
-   android:layout_height="match_parent">
+   android:layout_height="wrap_content">
+```
+### Step 5
+Locate the color.xml file, open and add the following code into the resource block
+```
+<color name = "toolbar_background">#bebebe</color>
+ ```
+### Step 6
+Return to the Toolbar XML in activity_contact.xml and modify/remove material as needed. The following code should look similar to below:
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tomtran.mycontactlist.ContactActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:background="@color/toolbar_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <ToggleButton
+            android:id="@+id/toggleButtonEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:text="ToggleButton" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="Save" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/navbar"
+        android:background="@color/navbar_background"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <ImageButton
+            android:id="@+id/imageButtonList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageButtonMap"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/contactlisticon" />
+        <ImageButton
+            android:id="@+id/imageButtonMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/mapicon" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/imageButtonMap"
+            android:src="@mipmap/settingsicon" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
 ```
