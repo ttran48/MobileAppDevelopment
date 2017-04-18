@@ -54,11 +54,11 @@ In the same xml file, navigate to the Palette in the Design Tab. Select Images i
 
 ### Step 5
 Switch to the activity_contact.xml. Locate the child Relative Layout of the root Relative Layout.
-Change the content of android:layout_width and android:layout_height to "fill_parent"
+Change the content of android:layout_width to "fill_parent"
 ```
 <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap-content"
         android:layout_alignParentStart="true"
         android:id="@+id/relativeLayout">
 ```
@@ -76,4 +76,11 @@ Select New > XML > Values XML File
 
 A window will pop-up. Type color as the Value File Name and select finish.
 
-
+### Step 2
+Locate the color.xml file and insert <color name = "navbar_background">#1a1a48</color> in between resources tags.
+Like so:
+```
+<resources>
+    <color name = "navbar_background">#1a1a48</color>
+</resources>
+```
