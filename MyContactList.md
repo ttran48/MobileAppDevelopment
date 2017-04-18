@@ -371,3 +371,103 @@ Your Design View should look like below thus far.
 ![img15](https://cloud.githubusercontent.com/assets/25268970/25147985/5bdd66de-2447-11e7-8844-2dd77015ca0f.jpg)
 
 ### Step 6
+Create 3 more EditText elements for City, State and Zip. Add these 3 elements under the previous EditText element that was created for Address.
+
+```
+            <EditText
+                android:id="@+id/editCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/editAddress"
+                android:ems="8"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/editState"
+                android:inputType="textCapWords" >
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/editState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/editCity"
+                android:layout_alignBottom="@+id/editCity"
+                android:ems="2"
+                android:maxLength="2"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/editZipcode"
+                android:inputType="textCapCharacters" >
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/editZipcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/editState"
+                android:layout_alignBottom="@+id/editState"
+                android:ems="4"
+                android:maxLength="5"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/editHome"
+                android:inputType="numberSigned" >
+
+            </EditText>
+```
+
+### Step 7
+Next create a TextView and EditText element for each field; Home Phone and Cell Phone. This should be a total of 4 blocks of code for each field. Find the code below and implement it under the last created EditText element which should have been Zip code.
+
+```
+            <TextView
+                android:id="@+id/textHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/editCity"
+                android:text="Home Phone:"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/editHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/textHome"
+                android:ems="7"
+                android:maxLength="14"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/editCell"
+                android:inputType="phone" >
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/textCell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textHome"
+                android:layout_alignLeft="@+id/editCell"
+                android:text="Cell Phone:"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/editCell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/editHome"
+                android:layout_alignBottom="@+id/editHome"
+                android:ems="7"
+                android:maxLength="14"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/editEMail"
+                android:inputType="phone" >
+
+            </EditText>
+            
+```
