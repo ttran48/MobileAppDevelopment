@@ -238,3 +238,7 @@ Return to the Toolbar XML in activity_contact.xml and modify/remove material as 
 
 </RelativeLayout>
 ```
+![img12](https://cloud.githubusercontent.com/assets/25268970/25145447/3c004622-243f-11e7-981c-d8054aadecd5.jpg)
+
+## Create the Data Entry Form
+### Step 1
