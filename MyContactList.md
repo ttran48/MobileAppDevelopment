@@ -84,3 +84,50 @@ Like so:
     <color name = "navbar_background">#1a1a48</color>
 </resources>
 ```
+
+### Step 3
+Return to the activity_contact.xml and modify the content in the Text tab to reflect the content below. Everything should be similar except for file paths i.e. com.example.tomtran.mycontactlist.ContactActivity
+```
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tomtran.mycontactlist.ContactActivity">
+
+    <RelativeLayout
+        android:id="@+id/navbar"
+        android:background="@color/navbar_background"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <ImageButton
+            android:id="@+id/imageButtonList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageButtonMap"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/contactlisticon" />
+        <ImageButton
+            android:id="@+id/imageButtonMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/mapicon" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/imageButtonMap"
+            android:src="@mipmap/settingsicon" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+```
