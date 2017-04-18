@@ -86,7 +86,7 @@ Like so:
 ```
 
 ### Step 3
-Return to the activity_contact.xml and modify the content in the Text tab to reflect the content below. Everything should be similar except for file paths i.e. com.example.tomtran.mycontactlist.ContactActivity
+Return to the activity_contact.xml and modify/remove the content in the Text tab to reflect the content below. Everything should be similar except for file paths i.e. com.example.tomtran.mycontactlist.ContactActivity
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -131,3 +131,11 @@ Return to the activity_contact.xml and modify the content in the Text tab to ref
 
 </RelativeLayout>
 ```
+This is what your product should look like thus far:
+![img10](https://cloud.githubusercontent.com/assets/25268970/25139071/377684c8-242a-11e7-94e7-991af87a8554.jpg)
+
+## Step 4
+Next copy the complete code from step 3 and implement this code into the following xml files.
+- activity_contact_list.xml
+- activity_contact_map.xml
+- activity_contact_settings.xml
