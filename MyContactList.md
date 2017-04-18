@@ -134,8 +134,28 @@ Return to the activity_contact.xml and modify/remove the content in the Text tab
 This is what your product should look like thus far:
 ![img10](https://cloud.githubusercontent.com/assets/25268970/25139071/377684c8-242a-11e7-94e7-991af87a8554.jpg)
 
-## Step 4
+### Step 4
 Next copy the complete code from step 3 and implement this code into the following xml files.
 - activity_contact_list.xml
 - activity_contact_map.xml
 - activity_contact_settings.xml
+
+## Create the Toolbar
+### Step 1
+Return to the activity_contact.xml and select the Design Tab. Drag and drop a RelativeLayout under the root RelativeLayout in the Component tree.
+<p>Be sure to not drag and drop the RelativeLayout into the navigation bar. If this mistake was made, simple just drag it out of the child relative layout</p>
+
+### Step 2
+Then locate the Toggle Button in Palette > Widgets. Drag and drop this element into the new Relativelayout in the component tree
+
+![img11](https://cloud.githubusercontent.com/assets/25268970/25144275/402dc156-243b-11e7-8e1a-db4a1b359007.jpg)
+
+### Step 3
+Drag another regular button into the same child relative layout
+ 
+### Step 4
+Navigate to the Text tab and ensure that the layout width and height for that child Relativelayout is set to match_parent
+```
+   android:layout_width="match_parent"
+   android:layout_height="match_parent">
+```
