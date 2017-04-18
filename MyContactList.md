@@ -507,3 +507,5 @@ Then create another additional 3 elements for Birthday Text, Date Text and a But
                 android:layout_alignBaseline="@+id/textBirthday"
                 android:text="Change"/>
 ```
+
+![img16](https://cloud.githubusercontent.com/assets/25268970/25150584/72a501ac-2450-11e7-8f2d-0c0fcf2d30c7.jpg)
