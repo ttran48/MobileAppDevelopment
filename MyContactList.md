@@ -672,7 +672,7 @@ Add the following code into the OnCreate method to initalize the new ToggleButto
         setForEditing(false);
 ```
 
-### Step 3
+### Step 3 >> Hacking Autofocus of EditText <<
 Navigate to the activity_contact.xml. Insert the following code as the first element in the Root RelativeLayout
 ```
 <LinearLayout
@@ -682,4 +682,78 @@ android:layout_width="0px"
 android:layout_height="0px" />
 ```
 
+### Step 4 >> Hacking Autofocus of EditText <<
+Next return to the ContactActivity.java and modify the IF Statement to have an ELSE statement.
+```
+else {
+ScrollView s = (ScrollView) findViewById(R.id. scrollView1 );
+s.clearFocus();
+}
+```
+## Code the DatePicker Dialog
+### Step 1
+In the left sidebar, locate the com.example.xxx.mycontactlist. Note that 'xxx' denotes a value name; this can be anything, but the name is assigned when you created the project.
+
+### Step 2
+Right-click the folder, select New > Java Class
+Enter DatePickerDialog for the Name and click Ok
+
+### Step 3
+Implement the following code into the DatePickerDialog Class
+```
+import android.app.DialogFragment;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.DatePicker;
+
+import java.sql.Time;
+
+public class DatePickerDialog extends DialogFragment {
+    public interface SaveDateListener {
+        void didFinishDatePickerDialog(Time selectedTime);
+    }
+
+    public DatePickerDialog() {
+        
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        final View view = inflater.inflate(R.layout. dateselect , container);
+
+        getDialog().setTitle( "Select Date" );
+
+        final DatePicker dp = (DatePicker)
+                view.findViewById(R.id. birthdayPicker );
+
+        Button saveButton = (Button) view.findViewById(R.id. btnOk );
+        saveButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Time selectedTime = new Time();
+                selectedTime.set(dp.getDayOfMonth(), dp.getMonth(), dp.getYear());
+                saveItem(selectedTime);
+            }
+        });
+        Button cancelButton = (Button) view.findViewById(R.id. btnCancel );
+        cancelButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getDialog().dismiss();
+            }
+        });
+        return view;
+    }
+    private void saveItem(Time selectedTime) {
+        SaveDateListener activity = (SaveDateListener) getActivity();
+        activity.didFinishDatePickerDialog(selectedTime);
+        getDialog().dismiss();
+    }
+}
+```
 ### Step 4
+Return to the ContactActivity.java. 
