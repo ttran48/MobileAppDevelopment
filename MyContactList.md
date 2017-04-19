@@ -569,6 +569,7 @@ package com.example.tomtran.mycontactlist;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.format.Time;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
@@ -703,13 +704,13 @@ Implement the following code into the DatePickerDialog Class
 ```
 import android.app.DialogFragment;
 import android.os.Bundle;
+import android.text.format.Time;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 
-import java.sql.Time;
 
 public class DatePickerDialog extends DialogFragment {
     public interface SaveDateListener {
@@ -756,4 +757,36 @@ public class DatePickerDialog extends DialogFragment {
 }
 ```
 ### Step 4
-Return to the ContactActivity.java. 
+Return to the ContactActivity.java. Locate public class ContactActivity extends Activity and change Activity to FragmentActivity implements SaveDateListener {
+```
+public class ContactActivity extends FragmentActivity implements SaveDateListener {
+```
+Note: this whole line of code will be underlined in Red; when this happens, select it and Alt + Enter. An option to implement will pop-up. Select implement and a new block of code will appear at the end of the java file.
+```
+@Override
+public void didFinishDatePickerDialog(Time selectedTime) {
+}
+```
+### Step 5
+Add the following code into that last public void didFinishDatePickerDialog(Time selectedTime) {
+```
+TextView birthDay = (TextView) findViewById(R.id. textBirthday );
+birthDay.setText(DateFormat. format ( "MM/dd/yyyy" , selectedTime.toMillis( false )).
+toString());
+```
+
+### Step 6
+Add in the following code after the last block of code in the ContactActivity.java file
+```
+   private void  initChangeDateButton() {
+        Button changeDate = (Button) findViewById(R.id.btnBirthday);
+        changeDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fm = getSupportFragmentManager();
+                DatePickerDialog datePickerDialog = new DatePickerDialog();
+                datePickerDialog.show(fm, "DatePick");
+            }
+        });
+    }
+```
